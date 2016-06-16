@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Function that process is aborted
+function abort {
+    echo ""
+    echo "$@" 1>&2
+    echo ""
+    exit 1
+}
+
+# Function that get current directory's absolute path
+getABSpath() {
+    filename=$@
+    if [ -d "$filename" ]; then
+        base="";
+        dir="$filename";
+    else
+        base="/$(basename "$filename")";
+        dir=$(dirname "$filename");
+    fi
+    dir=$(cd "$dir" && /bin/pwd);
+    echo "$dir$base"
+}
+
+# Check arguments
+if [ $# -eq 0 ]; then
+    abort "Usage: $0 file_1.c output_1.txt ... file_n.c output_n.txt"
+fi
+
+# Check filenames
+for file in "$@"
+do
+    [ -f $file ] || abort "$file: No such file... \nCheck your filename or its path!"
+done
+
+# Read config
+abspath=$(getABSpath $0)
+rel_path=`echo ${abspath} | sed -e s!bin/submit!!`
+. "${rel_path}libs/config.conf"
+
+# Output
+echo ""
+echo "$NAME  $STUDENTID"
+echo ""
+for file in "$@"
+do
+    if [ ${file##*.} = "c" ]; then
+        echo "::::::::::::::::::::::"
+        echo "  $file"
+        echo "::::::::::::::::::::::"
+        echo "`cat $file`"
+    else
+        echo "::::::::::::::::::::::"
+        echo "  Output"
+        echo "::::::::::::::::::::::"
+        echo "`cat $file`"
+        echo ""
+    fi
+done
