@@ -1,5 +1,5 @@
 
-# submit-shell
+# shell-submit
 ---
 
 ## Overview
@@ -26,6 +26,8 @@ $ ./config.sh
 $ submit file1.c file1.txt
 ```
 
+#### Example
+
 ###### hoge.c
 ```
 #include <stdio.h>
@@ -40,9 +42,7 @@ int main() {
 ```
 Hello World!
 ```
-
-
-#### Example
+  
 ```
 $ submit hoge.c output.txt > submission.txt
 ```
