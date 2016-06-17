@@ -2,13 +2,13 @@
 IFS_BACKUP=$IFS
 IFS=$'\n'
 
-rel_path=`echo $0 | sed -e s/config.sh//`
+rel_path=~/.kshell/conf/
 
 [ ! -f "${rel_path}config.conf" ] || . "${rel_path}config.conf"
 
-echo -n "What is your name?  Ex.)技科大　太郎: "
+echo -n "What is your name ? "
 read name
-echo -n "What is your Student ID? (Gakuseki Number) : "
+echo -n "What is your Student ID ?(Gakuseki Number) "
 read id
 
 output="NAME=${name}

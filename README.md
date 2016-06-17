@@ -1,6 +1,6 @@
 
-# shell-submit
----
+# submit-shell
+----
 
 ## Overview
 
@@ -13,9 +13,10 @@
 ## Installation
 
 ```
-$ cd "ディレクトリをダウンロードしたパス"
-$ ./install.sh  
-$ cd submit_shell/libs  
+$ cd ~
+$ git clone https://github.com/ss-koishi/shell-submit.git
+$ cd shell-submit/libs
+$ ./install.sh
 $ ./config.sh
 ```  
 入力を求めらるので、自分の名前と学籍番号を入力する。
@@ -42,7 +43,9 @@ int main() {
 ```
 Hello World!
 ```
-  
+
+
+##### Run
 ```
 $ submit hoge.c output.txt > submission.txt
 ```

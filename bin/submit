@@ -30,13 +30,12 @@ fi
 # Check filenames
 for file in "$@"
 do
-    [ -f $file ] || abort "$file: No such file... \nCheck your filename or its path!"
+    [ -f $file ] || abort "$file: No such file... \nCheck your filename or path!"
 done
 
 # Read config
-abspath=$(getABSpath $0)
-rel_path=`echo ${abspath} | sed -e s!bin/submit!!`
-. "${rel_path}libs/config.conf"
+conf_path=~/.kshell/conf/config.conf
+. "${conf_path}"
 
 # Output
 echo ""

@@ -11,11 +11,12 @@ getShellpath() {
     fi
     dir=$(cd "$dir" && /bin/pwd);
     ret="$dir$base"
-    echo `echo $ret | sed -e s!/libs/install.sh!/bin!`
+    echo `echo $ret | sed -e s!/libs/install.sh!/bin/submit!`
 }
 
-#echo $(getShellpath $0)
-echo "export PATH=$""PATH:$(getShellpath $0)" >> ~/.bash_profile
-echo "
-Must reboot current Terminal !!!!!
-"
+path=~/.kshell/
+mkdir -p ${path}"bin"
+mkdir -p ${path}"conf"
+cp $(getShellpath $0) $path
+echo "export PATH=$""PATH:$path" >> ~/.bash_profile
+echo "done."
