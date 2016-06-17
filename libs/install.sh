@@ -17,6 +17,6 @@ getShellpath() {
 path=~/.kshell/
 mkdir -p ${path}"bin"
 mkdir -p ${path}"conf"
-cp $(getShellpath $0) $path
+cp $(getShellpath $0) ${path}bin
 echo "export PATH=$""PATH:$path" >> ~/.bash_profile
 echo "done."
