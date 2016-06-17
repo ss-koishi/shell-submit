@@ -19,7 +19,9 @@ $ cd shell-submit/libs
 $ ./install.sh
 $ ./config.sh
 ```  
-入力を求めらるので、自分の名前と学籍番号を入力する。
+![Installation](https://github.co/ss-koishi/shell-submit/wiki/images/install.png)
+入力を求めらるので、自分の名前と学籍番号を入力する
+config.shの実行が終了したら、ターミナルを再起動する
 
 ## Usage
 
