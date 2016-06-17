@@ -1,5 +1,8 @@
 
 .DS_Store
 
-#Configuration file
+# Configuration file
 *.conf
+
+# Wiki
+*.wiki
