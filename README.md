@@ -23,7 +23,6 @@ $ ./config.sh
 config.shの実行が終了したら、ターミナルを再起動する
 ![Installation](https://github.com/ss-koishi/shell-submit/wiki/images/install.png)
 
-![hoge](https://raw.githubusercontent.com/ss-koishi/SearchCustomer/master/src/powered-by-google-on-white@2x.png)
 ## Usage
 
 ```
