@@ -3,7 +3,6 @@
 ----
 
 ## Overview
-![hoge](https://raw.githubusercontent.com/ss-koishi/SearchCustomer/master/src/powered-by-google-on-white@2x.png)
 プログラミング技術における課題の提出ファイルの作成を補助
 
 ## Description
